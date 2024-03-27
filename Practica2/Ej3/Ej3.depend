@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1710372253 source:c:\users\anali\joaco\tallerdelenguaje1\practica2\ej3\mutiplicacion_matriz_const.c
+	"multiplicacion_matriz_const.h"
+
+1710371558 c:\users\anali\joaco\tallerdelenguaje1\practica2\ej3\multiplicacion_matriz_const.h
+
+1710942550 source:c:\users\anali\joaco\tallerdelenguaje1\practica2\ej3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"print_mat.h"
+
+1710942550 c:\users\anali\joaco\tallerdelenguaje1\practica2\ej3\print_mat.h
+
+1710942550 source:c:\users\anali\joaco\tallerdelenguaje1\practica2\ej3\print_mat.c
+	"print_mat.h"
+

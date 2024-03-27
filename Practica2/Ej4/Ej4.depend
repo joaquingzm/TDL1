@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1710942550 source:c:\users\anali\joaco\tallerdelenguaje1\practica2\ej3\print_mat.c
+	"print_mat.h"
+
+1710950276 .h"
+
+1710942550 c:\users\anali\joaco\tallerdelenguaje1\practica2\ej3\print_mat.h
+
+1710950801 source:c:\users\anali\joaco\tallerdelenguaje1\practica2\ej4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"imprimir_mat_transpuesta.h"
+	"print_mat.h"
+
+1710950867 c:\users\anali\joaco\tallerdelenguaje1\practica2\librerias\print_mat.h
+	"print_mat.c"
+
+1710950867 .c"
+
+1710950277 c:\users\anali\joaco\tallerdelenguaje1\practica2\librerias\print_mat.c
+
+1710950899 c:\users\anali\joaco\tallerdelenguaje1\practica2\librerias\imprimir_mat_transpuesta.h
+	"imprimir_mat_transpuesta.c"
+
+1710950899 mat_transpuesta.c"
+
+1710950276 c:\users\anali\joaco\tallerdelenguaje1\practica2\librerias\imprimir_mat_transpuesta.c
+	"print_mat.h"
+
+1711107008 source:/media/alumnos/PENDRIVE JG/TallerDeLenguaje1/Practica2/Ej4/main.c
+	<stdio.h>
+	<stdlib.h>
+	"imprimir_mat_transpuesta.h"
+	"print_mat.h"
+
+1711107722 /media/alumnos/PENDRIVE JG/TallerDeLenguaje1/Practica2/Librerias/imprimir_mat_transpuesta.h
+
+1711106930 /media/alumnos/PENDRIVE JG/TallerDeLenguaje1/Practica2/Librerias/imprimir_mat_transpuesta.c
+	"print_mat.h"
+
+1711107766 /media/alumnos/PENDRIVE JG/TallerDeLenguaje1/Practica2/Librerias/print_mat.h
+
+1711106828 /media/alumnos/PENDRIVE JG/TallerDeLenguaje1/Practica2/Librerias/print_mat.c
+

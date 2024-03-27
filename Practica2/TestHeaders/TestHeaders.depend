@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1710336995 source:c:\users\anali\joaco\taller de lenguaje 1\práctica 2\testheaders\operaciones_mat.c
+	"myheader.h"
+
+1710337010 c:\users\anali\joaco\taller de lenguaje 1\práctica 2\testheaders\myheader.h
+
+1710346411 source:c:\users\anali\joaco\taller de lenguaje 1\práctica 2\testheaders\main.c
+	<stdio.h>
+	<stdlib.h>
+	"multiplicar.h"
+
+1710336995 c:\users\anali\joaco\taller de lenguaje 1\práctica 2\testheaders\operaciones_mat.c
+	"myheader.h"
+
+1710342191 c:\users\anali\joaco\taller de lenguaje 1\práctica 2\testheaders\multiplicar.h
+
+1710342114 source:c:\users\anali\joaco\taller de lenguaje 1\práctica 2\testheaders\multiplicar.c
+	"multiplicar.h"
+
+1710940909 source:c:\users\anali\joaco\tallerdelenguaje1\practica2\testheaders\main.c
+	<stdio.h>
+	<stdlib.h>
+	"multiplicar.h"
+
+1710940887 c:\users\anali\joaco\tallerdelenguaje1\practica2\testheaders\multiplicar.h
+
+1710342114 source:c:\users\anali\joaco\tallerdelenguaje1\practica2\testheaders\multiplicar.c
+	"multiplicar.h"
+

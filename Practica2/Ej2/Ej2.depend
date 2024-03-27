@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1710351121 source:c:\users\anali\joaco\tallerdelenguaje1\practica2\ej2\promediominmax.c
+	"promediominmax.h"
+
+1710351044 c:\users\anali\joaco\tallerdelenguaje1\practica2\ej2\promediominmax.h
+
+1710351923 source:c:\users\anali\joaco\tallerdelenguaje1\practica2\ej2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"promediominmax.h"
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1710375443 source:c:\users\anali\joaco\tallerdelenguaje1\practica2\testmatrices\main.c
+	<stdio.h>
+	<stdlib.h>
+
