@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1584194620 source:/media/alumnos/PENDRIVE JG/TallerDeLenguaje1/Practica2/Ej5/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1711110580 source:/home/alumnos/Escritorio/Practica2/Ej5/main.c
+	<stdio.h>
+	<stdlib.h>
+	"print_mat.h"
+	"print_mat.c"
+
+1711107766 /home/alumnos/Escritorio/Practica2/Librerias/print_mat.h
+
+1711108136 /home/alumnos/Escritorio/Practica2/Librerias/print_mat.c
+	"print_mat.h"
+
+1711538725 source:c:\users\alumnos\tdl1\tdl1-c-en-ide-codeblock\practica2\ej3\print_mat.c
+	"print_mat.h"
+
+1711538725 c:\users\alumnos\tdl1\tdl1-c-en-ide-codeblock\practica2\ej3\print_mat.h
+
+1711541030 source:c:\users\alumnos\tdl1\tdl1-c-en-ide-codeblock\practica2\ej5\main.c
+	<stdio.h>
+	<stdlib.h>
+	"../Ej3/print_mat.h"
+
+1711541030 source:c:\users\alumnos\tdl1\tdl1-c-en-ide-codeblock\practica2\arreglosestaticos\ej5\main.c
+	<stdio.h>
+	<stdlib.h>
+	"../Ej3/print_mat.h"
+
+1711538725 c:\users\alumnos\tdl1\tdl1-c-en-ide-codeblock\practica2\arreglosestaticos\ej3\print_mat.h
+

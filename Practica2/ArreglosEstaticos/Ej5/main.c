@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "print_mat.h"
-#include "print_mat.c"
+#include "../Ej3/print_mat.h"
+
 void sumar_mat(int col,int fil,int A[fil][col],int B[fil][col],int C[fil][col]);
 int main()
 {
@@ -27,7 +27,7 @@ int main()
     return 0;
 }
 
-void sumar_mat(int col,int fil,int A[fil][col],int B[fil][col],int C[fil][col]){
+void sumar_mat(int col,int fil,int A[][col],int B[][col],int C[][col]){
     int i,j;
     for(i=0;i<col;i++){
         for(j=0;j<fil;j++){

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1711544272 source:c:\users\alumnos\tdl1\tdl1-c-en-ide-codeblock\practica2\punteros\ej1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"../../ArreglosEstaticos/Ej2/promediominmax.h"
+
+1711538725 c:\users\alumnos\tdl1\tdl1-c-en-ide-codeblock\practica2\arreglosestaticos\ej2\promediominmax.h
+
