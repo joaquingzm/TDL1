@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../../ArreglosEstaticos/Ej2/promediominmax.h"
-
+#include "../../ArreglosEstaticos/Ej2/promediominmax.c"
 int main()
 {
     int i,dim=5;
@@ -23,7 +23,7 @@ void funcion(int arreglo[],int dim,float *ptr){
     *(ptr+1)=min_arreglo(arreglo,dim);
     *(ptr+2)=max_arreglo(arreglo,dim);
 }
-float promedio_arreglo(float a[],int diml){
+/*float promedio_arreglo(float a[],int diml){
     int i;
     float aux=0;
     for(i=0;i<diml;i++){
@@ -48,4 +48,4 @@ float max_arreglo(float a[],int diml){
         if(a[i]>max)max=a[i];
     }
     return max;
-}
+}*/
