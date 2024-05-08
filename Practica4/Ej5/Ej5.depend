@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1715173109 source:/home/alumnos/niamniam/Ej5/main.c
+	<stdio.h>
+	<stdlib.h>
+
