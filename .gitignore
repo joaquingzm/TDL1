@@ -1,3 +1,5 @@
 **/*.layout
 bin/
 obj/
+*.exe
+*.out
