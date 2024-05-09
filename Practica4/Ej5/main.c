@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+void informarMinMayus (char *p);
 int main()
 {
     char *p;
