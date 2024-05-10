@@ -1,48 +1,48 @@
 #include <stdio.h>
 #include <stdlib.h>
-float promedio_a(float *arreglo,int dim);
-float promedio_b(float arreglo[],int dim);
-float * reservar_mem(int n);
-void inicializar(float *arreglo,int n);
-void eliminar_mem(float **arreglo,int n);
+double promedio_a(double *arreglo,int dim);
+double promedio_b(double arreglo[],int dim);
+double * reservar_mem(int n);
+void inicializar(double *arreglo,int n);
+void eliminar_mem(double **arreglo,int n);
 int main(){
     int i,n=0;
     printf("Ingrese dimension de arreglo:");
     scanf("%d",&n);
-    float *arreglo=reservar_mem(n);
+    double *arreglo=reservar_mem(n);
     inicializar(arreglo,n);
-    printf("Prom a:%f  , Prom b:%f",promedio_a(arreglo,n),promedio_b(arreglo,n));
+    printf("Prom a:%lf  , Prom b:%f",promedio_a(arreglo,n),promedio_b(arreglo,n));
     eliminar_mem(&arreglo,n);
     return 0;
 }
 
-float * reservar_mem(int n){
-    return (float*)calloc(n,sizeof(float));
+double * reservar_mem(int n){
+    return (double*)calloc(n,sizeof(double));
 }
-void inicializar(float *arreglo,int n){
+void inicializar(double *arreglo,int n){
     int i;
     for(i=0;i<n;i++){
         printf("Ingrese valor para pos %d:",i);
-        scanf("%f",arreglo+i);
+        scanf("%lf",arreglo+i);
     }
 }
-float promedio_a(float *arreglo,int dim){
+double promedio_a(double *arreglo,int dim){
     int i;
-    float suma=0;
+    double suma=0;
     for(i=0;i<dim;i++){
         suma+=arreglo[i];
     }
     return (suma/dim);
 }
-float promedio_b(float arreglo[],int dim){
+double promedio_b(double arreglo[],int dim){
     int i;
-    float suma=0;
+    double suma=0;
     for(i=0;i<dim;i++){
         suma+=*(arreglo+i);
     }
-    return (float)(suma/dim);
+    return (double)(suma/dim);
 }
-void eliminar_mem(float **arreglo,int n){
+void eliminar_mem(double **arreglo,int n){
     free(*arreglo);
     *arreglo=NULL;
 }
