@@ -58,12 +58,19 @@ void agregar_elemeto_principio(lista **p,int e){
     *p=aux;
 }
 void agregar_elemeto_final(lista **p,int e){
-    lista *aux=*p;
-    while(aux->sig!=NULL)aux=aux->sig;
-    aux->sig=(lista*)malloc(sizeof(lista));
-    aux=aux->sig;
-    aux->dato=e;
-    aux->sig=NULL;
+    if(*p==NULL){
+       *p=(lista*)malloc(sizeof(lista));
+       (*p)->dato=e;
+       (*p)->sig=NULL; 
+    }
+    else{
+        lista *aux=*p;
+        while(aux->sig!=NULL)aux=aux->sig;
+        aux->sig=(lista*)malloc(sizeof(lista));
+        aux=aux->sig;
+        aux->dato=e;
+        aux->sig=NULL;
+    }
 }
 int cant_elementos(lista *p){
     int cont=0;
