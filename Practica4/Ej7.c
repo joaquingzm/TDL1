@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
-Terminar de chequear cómo hacer que no se imprima el nodo vacío
-*/
-
 struct lista
 {
     int dato;
@@ -70,7 +66,7 @@ void agregar_elemeto_final(lista **p,int e){
     if(*p==NULL){
        *p=(lista*)malloc(sizeof(lista));
        (*p)->dato=e;
-       (*p)->sig=NULL; 
+       (*p)->sig=NULL;
     }
     else{
         lista *aux=*p;

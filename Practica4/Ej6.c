@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
-Terminar de chequear cómo hacer que no se imprima el nodo vacío
-*/
-
 struct lista
 {
     int dato;
@@ -15,6 +11,7 @@ typedef struct lista lista;
 void inicializar_lista(lista **p,int n);
 void imprimir_lista(lista *p);
 void eliminar_lista(lista **p);
+void eliminar_elemento(lista **p,int e);
 void agregar_elemeto_principio(lista **p,int e);
 void agregar_elemeto_final(lista **p,int e);
 int cant_elementos(lista *p);
@@ -51,6 +48,30 @@ void eliminar_lista(lista **p){
         *p=aux;
     }
 }
+void eliminar_elemento(lista **p,int e){
+    lista *act=*p,*ant=*p;
+    if(act!=NULL){
+        while(act!=NULL){
+            while(act!=NULL&&act->dato!=e){
+                ant=act;
+                act=act->sig;
+            }
+            if(act!=NULL){
+                if(ant==act){
+                    *p=act->sig;
+                    free(act);
+                    act=*p;
+                    ant=act;
+                }
+                else{
+                    ant->sig=act->sig;
+                    free(act);
+                    act=ant->sig;
+                }
+            }
+        }
+    }
+}
 void agregar_elemeto_principio(lista **p,int e){
     lista *aux=(lista*)malloc(sizeof(lista));
     aux->dato=e;
@@ -61,7 +82,7 @@ void agregar_elemeto_final(lista **p,int e){
     if(*p==NULL){
        *p=(lista*)malloc(sizeof(lista));
        (*p)->dato=e;
-       (*p)->sig=NULL; 
+       (*p)->sig=NULL;
     }
     else{
         lista *aux=*p;

@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
-Terminar de chequear cómo hacer que no se imprima el nodo vacío
-*/
-
 struct lista
 {
     int dato;
@@ -15,6 +11,7 @@ typedef struct lista lista;
 void inicializar_lista(lista **p,int n);
 void imprimir_lista(lista *p);
 void eliminar_lista(lista **p);
+void eliminar_multiplo(lista **p,int e);
 void agregar_elemeto_principio(lista **p,int e);
 void agregar_elemeto_final(lista **p,int e);
 int cant_elementos(lista *p);
@@ -29,23 +26,7 @@ int main(){
     imprimir_lista(p);
     printf("Ingrese multiplo:");
     scanf(" %d",&num);
-    lista *aux=p,*ant=p;
-    /*
-    Terminar de arreglar, el problema que tengo es cuando el elemento
-    multiplo del numero ingresado está al inicio de la lista, tengo que cambiar
-    el valor de p al siguiente, y si ese también es multiplo, lo mismo
-    */
-    while(aux!=NULL){
-        if(aux->dato%num==0){
-            ant->sig=aux->sig;
-            free(aux);
-            aux=ant->sig;
-        }
-        else{
-            ant=aux;
-            aux=aux->sig;
-        }
-    }
+    eliminar_multiplo(&p,2);
     imprimir_lista(p);
     eliminar_lista(&p);
     imprimir_lista(p);
@@ -68,6 +49,30 @@ void eliminar_lista(lista **p){
         *p=aux;
     }
 }
+void eliminar_multiplo(lista **p,int e){
+    lista *act=*p,*ant=*p;
+    if(act!=NULL){
+        while(act!=NULL){
+            while(act!=NULL&&act->dato%e!=0){
+                ant=act;
+                act=act->sig;
+            }
+            if(act!=NULL){
+                if(ant==act){
+                    *p=act->sig;
+                    free(act);
+                    act=*p;
+                    ant=act;
+                }
+                else{
+                    ant->sig=act->sig;
+                    free(act);
+                    act=ant->sig;
+                }
+            }
+        }
+    }
+}
 void agregar_elemeto_principio(lista **p,int e){
     lista *aux=(lista*)malloc(sizeof(lista));
     aux->dato=e;
@@ -78,7 +83,7 @@ void agregar_elemeto_final(lista **p,int e){
     if(*p==NULL){
        *p=(lista*)malloc(sizeof(lista));
        (*p)->dato=e;
-       (*p)->sig=NULL; 
+       (*p)->sig=NULL;
     }
     else{
         lista *aux=*p;

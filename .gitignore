@@ -4,3 +4,4 @@ obj/
 *.exe
 *.out
 .vscode
+*.o
