@@ -10,21 +10,17 @@ int main(){
     int filas,*piramide=NULL;
     printf("Ingrese cantidad de filas de la piramide:");
     scanf("%d",&filas);
-    int espacio = calculo_espacio_piramide(filas);
     reservar_mem_piramide(&piramide,filas);
     iniciar_piramide(piramide,filas);
     imprimir_piramide(piramide,filas);
 }
-int calculo_espacio_piramide(int filas){
-    int i,aux=0;
-    for(i=1;i<=filas;i++)aux+=i;
-    return aux;
-}
+
 /*
 Decidí guardar a la pirámide como un arreglo
+La sumatoria de n+n-1+n-2...+1 = n(n+1)/2
 */
 void reservar_mem_piramide(int **piramide,int filas){
-    *piramide=(int*)malloc(calculo_espacio_piramide(filas)*sizeof(int));
+    *piramide=(int*)malloc((filas*(filas+1)/2)*sizeof(int));
 }
 /*
     La lógica del recorrido es empezar recorriendo por "niveles" la pirámide
@@ -36,7 +32,7 @@ más el nivel actual (más 1 si el nivel empieza en n=0)
     Por otro lado, en cada nivel n hay n+1 elementos (1er nivel es n=0, si 1er nivel fuera
 n=1 entonces habría n elementos en el nivel n). Sabiendo esto y que el 1er elemento
 y último elemento de cada nivel tienen que ser 1, recorro ese mismo nivel desde la
-posición del 1er elemento (sin incluirla) hasta la anteúltima posición del último 
+posición del 1er elemento (sin incluirla) hasta la anteúltima posición del último
 elemento del nivel cargando los datos correspondientes.
 
     Cómo hago la suma: Analizando la pirámide me dí cuenta que la suma de los
