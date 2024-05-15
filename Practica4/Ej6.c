@@ -1,26 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct lista
+struct nodo
 {
     int dato;
-    struct lista *sig;
+    struct nodo *sig;
 };
-typedef struct lista lista;
+typedef struct nodo nodo;
 
-void inicializar_lista(lista **p,int n);
-void imprimir_lista(lista *p);
-void eliminar_lista(lista **p);
-void eliminar_elemento(lista **p,int e);
-void agregar_elemeto_principio(lista **p,int e);
-void agregar_elemeto_final(lista **p,int e);
-int cant_elementos(lista *p);
+void inicializar_lista(nodo **p,int n);
+void imprimir_lista(nodo *p);
+void eliminar_lista(nodo **p);
+void eliminar_elemento(nodo **p,int e);
+void agregar_elemeto_principio(nodo **p,int e);
+void agregar_elemeto_final(nodo **p,int e);
+int cant_elementos(nodo *p);
 int main(){
     /*
     Si no pongo NULL explicitamente, me reservaba aún así
     espacio de memoria para una struct lista en todo 0
     */
-    lista *p=NULL;
+    nodo *p=NULL;
     int i;
     inicializar_lista(&p,5);
     imprimir_lista(p);
@@ -31,25 +31,26 @@ int main(){
     printf("%d",cant_elementos(p));
 }
 
-void inicializar_lista(lista **p,int n){
+void inicializar_lista(nodo **p,int n){
     int i=0;
     for(i=0;i<n;i++){
-        *p=(lista*) malloc(sizeof(lista));
+        *p=(nodo*) malloc(sizeof(nodo));
         (*p)->dato=i+1;
         p=&((*p)->sig);
     }
+    *p=NULL;
 }
-void eliminar_lista(lista **p){
+void eliminar_lista(nodo **p){
     int i=0;
-    lista *aux;
+    nodo *aux;
     while(*p!=NULL){
         aux=(*p)->sig;
         free(*p);
         *p=aux;
     }
 }
-void eliminar_elemento(lista **p,int e){
-    lista *act=*p,*ant=*p;
+void eliminar_elemento(nodo **p,int e){
+    nodo *act=*p,*ant=*p;
     if(act!=NULL){
         while(act!=NULL){
             while(act!=NULL&&act->dato!=e){
@@ -72,28 +73,28 @@ void eliminar_elemento(lista **p,int e){
         }
     }
 }
-void agregar_elemeto_principio(lista **p,int e){
-    lista *aux=(lista*)malloc(sizeof(lista));
+void agregar_elemeto_principio(nodo **p,int e){
+    nodo *aux=(nodo*)malloc(sizeof(nodo));
     aux->dato=e;
     aux->sig=*p;
     *p=aux;
 }
-void agregar_elemeto_final(lista **p,int e){
+void agregar_elemeto_final(nodo **p,int e){
     if(*p==NULL){
-       *p=(lista*)malloc(sizeof(lista));
+       *p=(nodo*)malloc(sizeof(nodo));
        (*p)->dato=e;
        (*p)->sig=NULL;
     }
     else{
-        lista *aux=*p;
+        nodo *aux=*p;
         while(aux->sig!=NULL)aux=aux->sig;
-        aux->sig=(lista*)malloc(sizeof(lista));
+        aux->sig=(nodo*)malloc(sizeof(nodo));
         aux=aux->sig;
         aux->dato=e;
         aux->sig=NULL;
     }
 }
-int cant_elementos(lista *p){
+int cant_elementos(nodo *p){
     int cont=0;
     while(p!=NULL){
         cont++;
@@ -101,7 +102,7 @@ int cant_elementos(lista *p){
     }
     return cont;
 }
-void imprimir_lista(lista *p){
+void imprimir_lista(nodo *p){
     printf("- ");
     while(p!=NULL){
         printf("%d - ",p->dato);
