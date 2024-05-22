@@ -136,7 +136,7 @@ void realizar_jugada_0(partida *p,int columnas,int filas,int c,int f){
                     }
                 }
             }
-        } 
+        }
 }
 
 void realizar_jugada(partida *p,int columnas,int filas,int c,int f){
