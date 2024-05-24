@@ -1,0 +1,10 @@
+Agua
+Barco
+Lapiz
+Cielo
+Gato
+Perro
+Mesa
+Silla
+Casa
+Jardin
