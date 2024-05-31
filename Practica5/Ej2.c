@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main(){
-    FILE *f = fopen("Ej2.txt","r");
+    FILE *f = fopen("Recursos/Ej2.txt","r");
     char aux;
     aux = fgetc(f);
     int cont=0;

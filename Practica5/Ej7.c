@@ -6,9 +6,9 @@ void copiarB(FILE *,FILE *);
 void copiarC(FILE *,FILE *);
 
 int main(){
-    FILE *ptrR=fopen("Ej7R.txt","r");
+    FILE *ptrR=fopen("Recursos/Ej7R.txt","r");
     if(ptrR!=NULL){
-        FILE *ptrW=fopen("Ej7W.txt","w");
+        FILE *ptrW=fopen("Recursos/Ej7W.txt","w");
         if(ptrW!=NULL){
             copiarB(ptrR,ptrW);
             fclose(ptrR);

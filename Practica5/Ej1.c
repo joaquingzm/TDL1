@@ -6,7 +6,7 @@ int main(){
     FILE *f;
     char linea[LONG];
     // Abrir el archivo
-    f = fopen("prueba.txt", "r");
+    f = fopen("Recursos/prueba.txt", "r");
     if (f == NULL){
         printf ("\nError al abrir archivo fuente\n");
         return 1;

@@ -3,7 +3,7 @@
 
 int main(){
     int aux,i=1,maxP=0,maxPDia=0;
-    FILE *f=fopen("Ej3.txt","r");
+    FILE *f=fopen("Recursos/Ej3.txt","r");
     fscanf(f,"%d-",&aux);
     while(!feof(f)){
         printf("Dia %d: %d\n",i,aux);

@@ -12,7 +12,7 @@ void imprimirMinMaxProm(double *,double *,double *);
 
 int main(){
     FILE *ptr;
-    ptr=fopen("vinos.csv","r");
+    ptr=fopen("Recursos/vinos.csv","r");
     if(ptr!=NULL){
         char **categorias=NULL;
         double min[CANTCOL-1],max[CANTCOL-1],prom[CANTCOL-1];

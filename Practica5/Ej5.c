@@ -20,7 +20,7 @@ void reservarMemoria(char ***a,int n){
 }
 void levantarDataDiccionario(char ***arreglo,int *dimL,int *dimF){
     char aux[15];
-    FILE *ptr=fopen("Ej5.txt","r");
+    FILE *ptr=fopen("Recursos/Ej5.txt","r");
     if(ptr!=NULL){
         fscanf(ptr,"%s",aux);
         while(!feof(ptr)){
