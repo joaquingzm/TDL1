@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1717590499 source:/home/alumnos/TDL1/Practica6/prueba/imath.c
+	<stdio.h>
+
+1717591249 source:/home/alumnos/TDL1/Practica6/prueba/main.c
+	<stdio.h>
+	"../../Recursos/imath.h"
+
+1717589717 /home/alumnos/TDL1/Practica6/prueba/imath.h
+
+1717589717 /home/alumnos/TDL1/Recursos/imath.h
+

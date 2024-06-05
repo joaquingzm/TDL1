@@ -19,6 +19,14 @@ int main(){
 }
 
 void crearIndice(elemento *indice,dim,ptr){
-    indice = (elemento*) malloc()
+    indice = (elemento*) malloc(10*sizeof(elemento));
+    elemento aux;
+    fscanf(ptr,"%lf;",&(aux.DNI));
+    aux.posicionABS=ftell(ptr);
+    while(!feof(ptr)){
+
+    }
 }
+
+void insertarEnIndice()
 
