@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1717759903 source:/home/alumnos/TDL1/Practica6/Ej10/main.c
+	<stdio.h>
+	<stdlib.h>
+	"../../Recursos/istack.h"
+
+1717759377 /home/alumnos/TDL1/Recursos/istack.h
+
+1717760250 source:/home/alumnos/TDL1/Recursos/istack.c
+	"istack.h"
+	<stdio.h>
+	<stdlib.h>
+
