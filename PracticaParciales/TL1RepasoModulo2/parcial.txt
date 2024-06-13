@@ -1,0 +1,51 @@
+1) 
+Imprime:
+Linea = posible
+L = Nuevo texto
+Linea = Caso pose
+
+La última línea que imprime depende de si la dirección de memoria a la que
+se le hizo free() fue reescrita por algún otro proceso de c. En conclusión
+lo que dije que imprime podría darse si en el espacio de memoria donde se
+hizo free() no es reescrito, pero realmente nada te asegura que vaya
+a ser así, por lo que la respuesta correcta tal vez sería que imprime
+basura.
+
+
+0 1 2 3 4 5 6 7 8 9 1011
+C a s o   p o s i b l e 
+
+2)
+Imprime:
+10  9  8  7  6
+
+Contrario de lo que parece, el loop del for es algo que se realiza después de la
+etapa de preprocesado, por lo que post etapa de procesado el for se vería
+así:
+
+#include <stdio.h> 
+#define MOSTRAR 0 
+int main() 
+{ int i; 
+  for (i=10; i>5; i--) { 
+    printf("%d  ",i); 
+  } 
+  return(0); 
+}
+
+3)
+#define nPares(x,y) ((x%2==0?1:0)+(y%2==0?1:0))
+
+4)
+a) F
+b) V
+c) V
+d) F
+e) F
+f) F
+g) V
+h) F
+i) F
+j) V
+
+5)
